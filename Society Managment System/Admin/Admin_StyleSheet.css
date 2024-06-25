@@ -1,0 +1,108 @@
+﻿body {
+   background:#EFF5F5;
+    font-family:Verdana;
+
+}
+
+#main {
+
+    width:1100px;
+    margin:0 auto;
+    height:auto;
+}
+
+#menu {
+
+    width:250px;
+    height:490px;
+    float:left;
+    margin-top:10px;
+
+}
+
+.tbll {
+
+    /*border:solid 1px #EB6440;*/
+    width:100%;
+    box-shadow: rgba(73, 113, 116, 0.1) 0px 7px 29px 0px;
+}
+
+.tblHead {
+
+    /*Heading of tables*/
+
+    background:#497174;
+    height:28px;
+    font-weight:bold;
+    text-align:center;
+    color:#fff;
+}
+
+.btn1 {
+
+  
+     background:#497174;
+     border:#EB6440;
+     height:30px;
+     color:#fff;
+     font-weight:bold;
+     /*transition: background-color 1s ease;*/
+     /*cursor:pointer;*/
+}
+
+.txt {
+    border: solid 1px #497174;
+    box-shadow: 0px 0px 0px 0px #ff9000;
+    margin-bottom: 15px;
+}
+
+ .txt1 {
+    height:25px;
+    width:180px;
+    border: solid 1px #497174;
+    box-shadow:0px 0px 0px 0px #ff9000;
+    margin-left: 22px;
+}
+
+ #head
+{
+  
+    width:1100px;
+    margin:0 auto;
+    height:130px;
+    text-align: center;
+}
+
+#cnt{
+
+   width:840px;
+   height:auto;
+   float:left;
+   margin-top:10px;
+   margin-left:5px;
+ }
+
+.btn {
+
+    background:#497174;
+    border:#EB6440;
+    color:#fff;
+    font-weight:bold;
+}
+
+#login
+{
+    margin:0 auto;
+    height:200px;
+    width:300px;
+    margin-top:80px;
+    box-shadow: rgba(73, 113, 116, 0.1) 0px 7px 29px 0px;
+}
+
+.lbl {
+    text-align: right;
+    color: #333;
+}
+
+
+

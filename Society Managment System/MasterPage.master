@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 138px;
+        }
+        .auto-style2 {
+            text-align: right;
+            color: #333;
+            width: 138px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="head">
+
+        <asp:Image ID="logo" runat="server" ImageUrl="~/Images/logoo.png" BorderStyle="None" Height="123px" ImageAlign="Middle" Width="259px"  />
+
+    </div>
+    <div id="menu">
+            <table class="tbl"
+                style="border-bottom-style: solid; border-bottom-width: thin">
+
+             <tr>
+                <td class="tblHead" colspan="2"> Member Login</td>
+             </tr>
+
+             <tr>
+                <td class="auto-style1">  &nbsp; </td>
+                <td> <asp:Label ID="lbllogin" runat="server" Font-Size="10pt" ForeColor="Red"></asp:Label> 
+                </td>
+            </tr>
+
+            <tr>
+
+                <td class="auto-style2">  User Name : </td>
+
+                 <td>  <asp:TextBox ID="txtUsername" runat="server" CssClass="txt"> </asp:TextBox> </td>
+
+            </tr>
+
+            <tr>
+
+                 <td class="auto-style2">  Password : </td>
+
+                 <td> <asp:TextBox ID="txtPassword" runat="server" CssClass="txt" TextMode="Password"> </asp:TextBox> </td>
+           </tr>
+
+           <tr>
+
+               <td class="auto-style1">  &nbsp; </td>
+
+               <td> <asp:Button ID="loginBtn" runat="server" Text="Login" CssClass="btn"  Width="70px" Height="28px" OnClick="loginBtn_Click" /></td>
+          </tr>
+
+            <tr>
+
+                <td class="auto-style1">  &nbsp; </td>
+               
+                <td>   <asp:LinkButton ID="forgetPasswordLink" runat="server" CssClass="lnk" Font-Size="12px"  PostBackUrl="~/forgot_password.aspx"> Forgot Password </asp:LinkButton></td>
+
+            </tr>
+          </table>
+
+            <br />
+
+            <table class="tbl">
+
+
+            <tr>
+                <td class="tblHead"> Society List </td>
+            </tr>
+
+            <tr>
+
+                <td>
+                    <asp:GridView ID="MaterPageGridview" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1"
+                        
+                         ForeColor="#497174" BorderStyle="None" ShowHeader="false" style="text-align:center" Width="228px" Height="201px">
+                        <Columns>
+                            <asp:BoundField DataField="SName" HeaderText="Society Name" SortExpression="SName" />
+                        </Columns>
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Society_MANAGEMENTConnectionString2 %>" SelectCommand="SELECT [Image], [SName], [SAddress] FROM [SocietyDetails]"></asp:SqlDataSource>
+              </td>
+
+            </tr>
+
+                 <tr> <td> &nbsp; </td> </tr>
+
+            </table>
+            </div>
+
+                
+        <div id="main"> 
+
+            <div id="cnt"><div id="mnu">
+
+                <asp:Button ID="homeBtn" runat="server" Text="Home" CssClass="btn" Width="135px" Height="28px"  PostBackUrl="~/WelcomePage.aspx"/>
+
+                <asp:Button ID="searchBtn" runat="server" Text="Search" CssClass="btn" Width="135px" Height="28px" PostBackUrl="~/search.aspx" />
+
+                <asp:Button ID="rentListBtn" runat="server" Text="Rent List" CssClass="btn" Width="135px" Height="28px" PostBackUrl="~/rentList.aspx"/>
+
+                <asp:Button ID="sellListBtn" runat="server" Text="Sell List" CssClass="btn" Width="135px" Height="28px" PostBackUrl="~/sellList.aspx" />
+
+                <asp:Button ID="adminBtn" runat="server" Text="Admin" CssClass="btn" Width="135px"  Height="28px" PostBackUrl="~/Admin/Admin_login.aspx" />
+
+                <asp:Button ID="contactusBtn" runat="server" Text="Contact Us" CssClass="btn" Width="135px"  Height="28px"/>
+             </div> 
+
+                <div id="cnt1">
+                    
+               <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"> </asp:ContentPlaceHolder>
+                </div>
+                </div>
+        </div>
+                
+    </form>
+</body>
+</html>
